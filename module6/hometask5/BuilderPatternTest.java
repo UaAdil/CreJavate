@@ -9,7 +9,7 @@ public class BuilderPatternTest {
         System.out.println("Text Report:");
         System.out.println(textReport);
 
-        // Создание HTML-отчета
+        // create HTML-report
         IReportBuilder htmlBuilder = new HtmlReportBuilder();
         director = new ReportDirector(htmlBuilder);
         director.constructReport("HTML Report", "This is the <b>HTML</b> content.", "End of HTML Report.");
