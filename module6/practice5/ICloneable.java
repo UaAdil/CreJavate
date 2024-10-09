@@ -112,7 +112,7 @@ class Character implements ICloneable<Character> {
         this.intelligence = intelligence;
         this.weapon = weapon;
         this.armor = armor;
-        this.skills = new ArrayList<>(skills); // Глубокое копирование списка
+        this.skills = new ArrayList<>(skills); 
     }
 
     public String getName() {
@@ -149,7 +149,6 @@ class Character implements ICloneable<Character> {
 
     @Override
     public Character clone() {
-        // Глубокое клонирование всех вложенных объектов
         List<Skill> clonedSkills = new ArrayList<>();
         for (Skill skill : skills) {
             clonedSkills.add(skill.clone());
