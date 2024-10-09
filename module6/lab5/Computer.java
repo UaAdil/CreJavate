@@ -7,7 +7,7 @@ public class Computer {
     private String GPU;
     private String OS;
 
-    // Геттеры и сеттеры
+    // Sеттеры
     public void setCPU(String CPU) { this.CPU = CPU; }
     public void setRAM(String RAM) { this.RAM = RAM; }
     public void setStorage(String storage) { this.storage = storage; }
