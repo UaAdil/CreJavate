@@ -4,10 +4,9 @@ public class LoggerTest {
 
     public static void main(String[] args) {
         Logger logger = Logger.getInstance();
-        logger.setLogLevel(LogLevel.INFO);  // Устанавливаем уровень логирования
+        logger.setLogLevel(LogLevel.INFO); 
         logger.setLogFilePath("application.log");
 
-        // Создаем несколько потоков для логирования
         Thread thread1 = new Thread(() -> {
             for (int i = 0; i < 5; i++) {
                 logger.log("Message from thread 1 - INFO", LogLevel.INFO);
@@ -29,7 +28,6 @@ public class LoggerTest {
             }
         });
 
-        // Запускаем потоки
         thread1.start();
         thread2.start();
         thread3.start();
@@ -42,8 +40,7 @@ public class LoggerTest {
             e.printStackTrace();
         }
 
-        // Чтение логов
         logger.readLogs();
-        logger.close(); // Закрытие ресурса по завершению
+        logger.close();
     }
 }
