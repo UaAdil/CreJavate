@@ -15,7 +15,7 @@ public class ConfigurationManager {
 
     public static ConfigurationManager getInstance() {
         if (instance == null) {
-            synchronized (lock) { // Блокировка для обеспечения потокобезопасности
+            synchronized (lock) {
                 if (instance == null) {
                     instance = new ConfigurationManager();
                 }
